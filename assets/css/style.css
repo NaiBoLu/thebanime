@@ -1,0 +1,478 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "comic sans ms", "comic sans", "cursive";
+    scroll-behavior: smooth;
+}
+/*
+1 tu ngoai vao trong
+2 tu tren xuong duoi 
+3 tu tong quan den chi tiet
+ */
+
+/* 
+1 vi tri
+2 kich thuoc (width, height)
+3 mau sac
+4 kieu dang
+*/
+
+#main {
+
+}
+
+::placeholder {
+    color: #ffffffa8;
+    font-family: "comic sans ms", "comic sans", "cursive";
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+.clear {
+    clear: both;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 46px;
+    background-image: linear-gradient(90deg, rgba(196, 21, 103), rgba(27, 15, 196) );
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn,
+#header .search-btn {
+    float: right;
+    padding: 0 21px;
+}
+
+#header .menu-icon,
+#header .search-icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+#header .mobile-menu-btn:hover,
+#header .search-btn:hover {
+    background-color: rgb(57, 45, 224);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#nav, .subnav {
+    list-style: none;
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+} 
+
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+    font-weight: 550;
+    letter-spacing: 2px;
+}
+
+#nav li:hover .subnav {
+    display: block;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+#nav > li:hover >  a,
+#nav .subnav li:hover a{
+    color: #ff68f7;
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.3) ;
+    border-radius: 5px;
+}
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    background-color: #8a0035;
+    background-image: linear-gradient(90deg, rgb(177, 4, 85), rgb(38, 25, 211) );
+    color: #000;
+    border-bottom-left-radius: 5px ;
+    border-bottom-right-radius: 5px;
+}
+
+#nav .subnav a {
+    color: #ffffff;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+
+
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url(/assets/img/slider2.jpg) top center / cover no-repeat;
+}
+
+#slider .text-content{
+    position: absolute;
+    bottom: 47px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+#slider .text-heading{
+    font-weight: 500;
+    font-size: 24px;
+    text-shadow: 0px 0px 15px rgb(0, 130, 130),
+                0px 0px 20px rgb(0, 130, 130),
+                0px 0px 30px rgb(0, 130, 130),
+                0px 0px 45px rgb(0, 130, 130);
+}
+
+#slider .text-description{
+    font-size: 15px;
+    margin-top: 25px;
+    text-shadow: 0px 0px 15px rgb(0, 130, 130),
+                0px 0px 20px rgb(0, 130, 130),
+                0px 0px 30px rgb(0, 130, 130),
+                0px 0px 45px rgb(0, 130, 130);
+}
+
+
+#content {
+    
+}
+
+#content .content-section {
+    width: 800px;
+    max-width: 100%;
+    padding: 64px 0 112px;
+    margin-left: auto ;
+    margin-right: auto; 
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+#content .section-heading {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+#content .about-text {
+    font-size: 15px;
+    margin-top: 25px;
+    text-align: justify;
+    line-height: 1.4rem;
+}
+
+#content .member-list {
+    margin-top: 48px;
+}
+
+#content .member-item {
+    float: left;
+    text-align: center;
+    width: 33.3333%
+}
+
+#content .member-name {
+    font-size: 16px;
+}
+
+#content .member-img {
+    width: 154px;
+    margin-top: 15px;
+    border-radius: 4px;
+    border: 2px solid #ccc;
+    box-shadow: 0px 0px 10px cyan;
+}
+
+#content .member-img:hover {
+    transform: scale(1.03);
+    text-shadow: 0px 0px 15px rgb(0, 130, 130);
+    background-color: rgba(0, 0, 0, 0.144);
+    border: 2px solid white;
+    box-shadow: 0px 0px 25px cyan;
+    cursor: pointer;
+}
+
+#content .memcho {
+    color: #e8de27;
+    text-shadow: 0px 0px 10px #e8de27,
+                0px 0px 20px #e8de27;
+}
+
+#content .kana {
+    color: #ff0000;
+    text-shadow: 0px 0px 10px #ff0000,
+                0px 0px 20px #ff0000;
+}
+
+#content .ruby {
+    color: #f03abc;
+    text-shadow: 0px 0px 10px #f03abc,
+                0px 0px 20px #f03abc;
+}
+
+.band-section, .tour-section, .contact-section {
+    background-image: linear-gradient(0deg, rgba(196, 21, 103, 0.911), rgba(27, 15, 196, 0.863) );
+    color: #fff;
+}
+
+.tickets-list {
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.144);
+    list-style: none;
+    margin-top: 40px;
+    border: 2px solid #ccc;
+    box-shadow: 0px 0px 25px cyan;
+}
+
+.tickets-list li {
+    font-size: 15px;
+    padding: 11px 16px;
+    border: 1px solid #ccc;
+}
+
+.tickets-list .sold-out {
+    background-color: rgb(255, 0, 64);
+    padding: 3px 4px;
+    margin-left: 16px;
+    border-radius: 4px;
+}
+
+.tickets-list .quantity {
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: #2f00ff;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 50%;
+    margin-top: -2px;
+}
+
+.places-list {
+    margin: 16px -8px 0;
+}
+
+.place-item {
+    margin: 0 8px;
+    float: left;
+    width: 31.29%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px cyan;
+}
+
+.place-img {
+    width: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom: 1px solid #ccc;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.8;
+}
+.place-body {
+    padding: 16px;
+    font-size: 15px;
+}
+
+.place-heading {
+    font-size: 15px;
+}
+
+.place-time {
+    margin-top: 15px;
+    color: #ddaaaa;
+}
+
+.place-desc {
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+.place-buy-btn {
+    display: inline-block;
+    padding: 11px 16px;
+    margin-top: 15px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.233);
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.place-buy-btn:hover {
+    transform: scale(1.08);
+    text-shadow: 0px 0px 15px rgb(0, 130, 130);
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px cyan;
+}
+
+/* Contact from */
+
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-infor {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-infor i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 18px;
+}
+
+.contact-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px cyan;
+    background-color: rgba(0, 0, 0, 0);
+    color: #ffffff;
+}
+
+.contact-form .form-submit {
+    font-family: "comic sans ms", "comic sans", "cursive";
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px cyan;
+    padding: 10px 16px;
+    float: right;
+    border-radius: 4px;
+}
+
+input[type="text"]
+{
+    font-family: "comic sans ms", "comic sans", "cursive";
+}
+
+.contact-form .form-submit:hover {
+    transform: scale(1.08);
+    text-shadow: 0px 0px 15px rgb(0, 130, 130);
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px cyan;
+}
+
+.map-section img {
+    width: 100%;
+}
+
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+    background-color: #000000ec;
+}
+
+#footer .socials-list  {
+    font-size: 24px;
+
+}
+
+#footer .socials-list a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#footer .copyright a:hover,
+#footer .socials-list a:hover {
+    color: #ffffff9c;
+
+}
+
+#footer .copyright {
+    margin-top: 15px;
+    color: #fff;
+}
+
+#footer .copyright a {
+    color: #fff;
+}
